@@ -1,0 +1,14 @@
+$*
+*.orig
+*.rej
+*~
+.#*#
+.*.orig
+.*.rej
+.DS_Store
+._*
+.project
+/_ares
+/ide.log
+/project.json
+test/root

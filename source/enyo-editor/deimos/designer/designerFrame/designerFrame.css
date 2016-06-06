@@ -1,0 +1,26 @@
+
+.designer-frame-highlight {
+	height: 0;
+	width: 0;
+	pointer-events: none;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 9999;
+}
+.designer-frame-select-highlight {
+	background-image: url("./highlight-orange.gif?overlay=designer");
+	opacity: 0.2;
+}
+
+.designer-frame-drop-highlight {
+	background-image: url("./highlight-blue.gif?overlay=designer");
+	opacity: 0.2;
+}
+
+/* Width/height handles */
+.designer-frame-resize-handle {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: orange;
+}

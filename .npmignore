@@ -1,0 +1,11 @@
+.git*
+.DS_Store
+.project
+*~
+.#*#
+._*
+*.orig
+*.rej
+.*.orig
+.*.rej
+$*

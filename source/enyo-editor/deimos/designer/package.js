@@ -1,0 +1,19 @@
+enyo.depends(
+	"Palette.js",
+	"Palette.css",
+	"designerFrame/Json.js",
+	"Inspector.css",
+	"Inspector.js",
+	"ComponentView.js",
+	"ComponentView.css",
+	"InspectorConfig.js",
+	"Designer.js",
+	"designer.css",
+	"designerFrame/RPCCommunicator.js",
+	"CssEditor.js",
+	"CssEditor.css",
+	"ColorPicker.js",
+	"LayoutEditor.js",
+	"LayoutEditor.css",
+	"PaletteComponentActionPopup.js"
+);
