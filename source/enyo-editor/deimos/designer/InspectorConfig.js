@@ -244,8 +244,9 @@ enyo.kind({
 	],
 	create: function() {
 		this.inherited(arguments);
-		this.createComponent({name: "selector", kind: "Inspector.Internal.Select",
-							  fieldValue: this.fieldValue, values: this.values}, {owner: this});
+		this.createComponent(
+			{name: "selector", kind: "Inspector.Internal.Select", fieldValue: this.fieldValue, values: this.values}, 
+			{owner: this});
 		this.$.selector.setDisabled(this.getDisabled());
 	},
 	disabledChanged: function() {

@@ -4,10 +4,17 @@
 	text-align: right;
 	padding-right: 4px;
 }
+
 .onyx-input-decorator > .inspector-field-editor,
 .inspector-field-editor {
 	width: 5rem;
 }
+
+.onyx-input-decorator > .inspector-field-editor.property-value,
+.inspector-field-editor.property-value {
+	width: 20rem;
+}
+
 
 .inspector-enyo-input-like{
 	background: white;

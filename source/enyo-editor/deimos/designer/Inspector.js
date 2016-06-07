@@ -240,7 +240,12 @@ enyo.kind({
 			if (values) {
 				comp.values = values;
 			}
-			attributeRow.createComponent(comp);
+			
+			var booleanOrTextComponent = attributeRow.createComponent(comp);
+			
+			if (inType === 'properties') {
+				booleanOrTextComponent.$.value.addClass("property-value");
+			}
 		}
 	},
 	//* Set up properties and create the LayoutEditor
