@@ -1,7 +1,19 @@
 Ares 2
 ======
 
-June 4, 2016 - update
+Quick Launch instructions - June 6, 2016
+--------------------------------------------
+
+To start experimenting immediately with Ares / Enyo do the following:
+
+* Make sure node.js is installed (It is a set of command-line tools for javascript server applications). https://nodejs.org/en/
+* Clone or download this repo.
+* Open a terminal and move into the main directory of this project.
+* run this command: node ide.js
+* now open your web browser to: http://127.0.0.1:9009/ide
+
+
+update - June 4, 2016
 -------------------------
 
 My name is Aaron Rosenzweig. I see Enyo/Ares as one product. It provides today's most compelling user experience coupled with joy of development for the modern codewarrior. 
