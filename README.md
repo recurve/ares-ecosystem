@@ -1,8 +1,23 @@
 Ares 2
 ======
 
-Quick Launch instructions - June 6, 2016
---------------------------------------------
+If you want to play with Ares easily - June 7, 2016
+-----------------------------------------------------
+
+Go to the releases tab and download the finished product (10 megs). It's a pretty small download by 2016 standards yet it works just fine. Follow the directions there which are of the form:
+
+npm install ares-ide-0.2.13.tgz
+
+You can then launch Ares by issuing this command from the terminal:
+
+~/node_modules/.bin/ares-ide
+
+Note: we'll make a point of having a downloadable product with every release tag since the NPM version of Ares is stuck at version 2.11 - at some point we may start updating the NPM version but not now. It's out of our hands. 
+
+Quick Launch instructions after cloning the repo - June 6, 2016
+----------------------------------------------------------------
+
+Note: cloning the repo is about 250 megs but if you download from the release tab it's only a 10 meg transfer. You should only clone the repo if you want to start enhancing the Ares Ecosystem. 
 
 To start experimenting immediately with Ares / Enyo do the following:
 
