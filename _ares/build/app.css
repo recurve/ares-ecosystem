@@ -1905,7 +1905,7 @@
   background-size: auto;
   /*background size is contain in onyx-toolbar css, if missing to change it, problems on safari, bg display all image*/
 
-  z-index: auto;
+  z-index: 10;
 }
 .ares-small-toolbar {
   height: 50px;
@@ -1932,9 +1932,6 @@
 }
 .ares-bottom-bar {
   z-index: 9 ;
-}
-.ares-top-toolbar.ares-designer-panels .ares-top-toolbar.ares-harmonia-panel {
-  z-index: 10;
 }
 .ares-designer-panels > .enyo-fittable-columns-layout.onyx-toolbar-inline > * {
   vertical-align: inherit;

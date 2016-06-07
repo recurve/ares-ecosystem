@@ -123,7 +123,7 @@
 	border: 1px solid #222; 
 	background: @ares-toolbar-gradient;
 	background-size: auto; /*background size is contain in onyx-toolbar css, if missing to change it, problems on safari, bg display all image*/
-	z-index: auto;
+	z-index: 10; //needed for Safari tooltips displayed in the code editor toolbar  
 }
 
 .ares-small-toolbar{
@@ -154,10 +154,6 @@
 
 .ares-bottom-bar {
 	z-index: 9 ; // behind top-toolbar so tooltip are not hidden on Safari
-}
-
-.ares-top-toolbar.ares-designer-panels .ares-top-toolbar.ares-harmonia-panel{
-	z-index: 10; //needed for Safari tooltips displayed in the code editor toolbar  
 }
 
 .ares-designer-panels > .enyo-fittable-columns-layout.onyx-toolbar-inline > * {
