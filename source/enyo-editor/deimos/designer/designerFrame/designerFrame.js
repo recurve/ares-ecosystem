@@ -87,7 +87,7 @@ enyo.kind({
 				errMsg = "Enyo used by your application is too old ("
 					+ myVerStr + "). Console log may show duplicated kind error "
 					+ "and Designer may not work as expected. You should use Enyo >= "
-					+ this.minEnyoVersion+" Read <a href='https://github.com/enyojs/ares-project/blob/master/README.md' target='_blank'>README.md to update Enyo libraries</a>";
+					+ this.minEnyoVersion+" Read <a href='https://github.com/recurve/ares-ecosystem' target='_blank'>README.md to update Enyo libraries</a>";
 				enyo.warn(errMsg);
 				/*
 				 * TODO this message should go in an error/warning history as described in ENYO-2462
