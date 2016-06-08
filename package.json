@@ -1,6 +1,6 @@
 {
 	"name": "ares-ide",
-	"version": "0.2.13",
+	"version": "0.2.14",
 	"license" : "Apache 2.0", 
 	"description": "A browser-based code editor and UI designer for Enyo 2 projects",
 	"keywords": ["ide", "enyo", "phonegap", "android", "ios", "windowsphone", "blackberry", "webos", "html5"],
@@ -11,7 +11,7 @@
 	"bin": "./ide.js",
 	"repository" : { 
 		"type" : "git",
-		"url" : "http://github.com/enyojs/ares-project.git"
+		"url" : "https://github.com/recurve/ares-ecosystem"
 	},
 	"engines": {
 		"node" : ">=0.10.6",

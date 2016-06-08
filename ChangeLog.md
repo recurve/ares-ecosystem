@@ -1,6 +1,17 @@
 ChangeLog
 =========
 
+**Release: ares-ide 0.2.14**
+
+Brief:
+* Bug fix release
+
+Details:
+* In graphic "Properties" inspector made the increased size of text fields from 5em to 20em.
+* Tooltips are now visible in the "ares-top-toolbar" - they were previous hidden underneath the code editor. 
+
+----------------------------------------------------------------------------------------------
+
 **Release: ares-ide 0.2.13**
 
 Brief:
