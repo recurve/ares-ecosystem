@@ -18,15 +18,15 @@ If you want to play with Ares easily - June 11, 2016
 
 If you don't have "nodejs" installed (server side Javascript engine) then go to this link to get it for your OS:
 
-https://nodejs.org/en/
+		https://nodejs.org/en/
 
 Next use the "node package manager" (NPM) to install the Ares Ecosystem IDE
 
-npm -d install ares-ecosystem-ide
+		npm -d install ares-ecosystem-ide
 
 You can then launch Ares by issuing this command from the terminal:
 
-~/node_modules/.bin/ares-ecosystem-ide -b
+		~/node_modules/.bin/ares-ecosystem-ide -b
 
 * Note 1: the tilde is for a unix system to jump to your home directory, on a Windows PC you'd have to time the exact location).
 * Note 2: you may want to launch with "sudo" (on unix systems) to have permissions to download a new bootplate (starter Enyo project) by using Ares menus. 
