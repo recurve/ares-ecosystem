@@ -1,6 +1,21 @@
 ChangeLog
 =========
 
+**Release: ares-ecosystem-ide 0.2.15**
+
+Brief:
+* Bug fix release - June 11, 2016
+
+Details:
+* Confirmed reports that Ares was not allowing users to launch the graphical Interface Builder on Firefox and Chrome (Safari was ok).
+* Fixed a piece of Analyzer2 (Lexer.js) to stop an infinite loop (was a bug in Regular expressions - we still have "two problems")
+* Ares is now tested and known to be working in the latest versions of Safari, Firefox, and Chrome.  
+* Note 1: Ares is compatibile with Enyo projects up to v2.3 (still a respectable Enyo release before Smart TVs)
+* Note 2: the newer Enyo 2.5 and 2.7 releases are more LG TV specific and broke compatibility with Ares (but we hope to support them soon)
+* Note 3: You can now install "ares-ecosystem" directly from NPM
+
+----------------------------------------------------------------------------------------------
+
 **Release: ares-ide 0.2.14**
 
 Brief:

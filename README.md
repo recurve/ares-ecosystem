@@ -6,7 +6,7 @@ If you want to play with Ares easily - June 7, 2016
 
 Go to the releases tab and download the finished product (10 megs). It's a pretty small download by 2016 standards yet it works just fine. Follow the directions there which are of the form:
 
-npm install ares-ide-0.2.14.tgz
+npm install ares-ide-0.2.15.tgz
 
 You can then launch Ares by issuing this command from the terminal:
 
