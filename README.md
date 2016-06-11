@@ -1,23 +1,43 @@
 Ares 2
 ======
 
-If you want to play with Ares easily - June 7, 2016
+The only fully open source solution that brings you:
+
+* True graphical Interface Builder and IDE written in its own frameworks - named "Ares"
+* True app development framework in pure Javascript without any HTML for Single Page Applications - named "Enyo"
+
+[![NPM](https://nodei.co/npm/ares-ecosystem-ide.png)](https://nodei.co/npm/ares-ecosystem-ide/)
+
+Ares Ecosystem is at v2.15
+----------------------------
+
+This release plays nice with recent versions of Safari, Firefox, and Chrome
+
+If you want to play with Ares easily - June 11, 2016
 -----------------------------------------------------
 
-Go to the releases tab and download the finished product (10 megs). It's a pretty small download by 2016 standards yet it works just fine. Follow the directions there which are of the form:
+If you don't have "nodejs" installed (server side Javascript engine) then go to this link to get it for your OS:
 
-npm install ares-ide-0.2.15.tgz
+https://nodejs.org/en/
+
+Next use the "node package manager" (NPM) to install the Ares Ecosystem IDE
+
+npm -d install ares-ecosystem-ide
 
 You can then launch Ares by issuing this command from the terminal:
 
-~/node_modules/.bin/ares-ide
+~/node_modules/.bin/ares-ecosystem-ide -b
 
-Note: we'll make a point of having a downloadable product with every release tag since the NPM version of Ares is stuck at version 2.11 - at some point we may start updating the NPM version but not now. It's out of our hands. 
+* Note 1: the tilde is for a unix system to jump to your home directory, on a Windows PC you'd have to time the exact location).
+* Note 2: you may want to launch with "sudo" (on unix systems) to have permissions to download a new bootplate (starter Enyo project) by using Ares menus. 
+* Note 3: alternatively you could download your preferred bootplate yourself directly. As of this moment the preferred version is here: http://enyojs.com/archive/bootplate-2.3.0-pre.12.zip
+* Note 4: Enyo 2.5 and 2.7 went in another direction to target the LG Smart TVs more directly and do not work with the Ares Ecosystem at this time. You can not open them in Deimos (Interface Builder). 
 
-Quick Launch instructions after cloning the repo - June 6, 2016
+
+Quick Launch instructions after cloning the repo
 ----------------------------------------------------------------
 
-Note: cloning the repo is about 250 megs but if you download from the release tab it's only a 10 meg transfer. You should only clone the repo if you want to start enhancing the Ares Ecosystem. 
+Note: cloning the repo is about 250 megs but if you install the completed product from NPM it's only a 10 meg transfer. You should only clone the repo if you want to start enhancing the Ares Ecosystem. If you want to just develop apps with this system, do the NPM install.
 
 To start experimenting immediately with Ares / Enyo do the following:
 
@@ -40,16 +60,13 @@ The promise is to allow developers to use an Interface Builder along with a rich
 Current status
 ----------------------
 
-* Ares v2.11 is only compatible with Enyo up to v2.3.9
-* Enyo v2.5.7 is what WebOS and LuneOS use
-* Enyo v2.7 could be the last public release of the core frameworks from LG
+* Ares Ecosystem v2.15 is only compatible with Enyo up to v2.3.9
+* Enyo v2.5.7 is what WebOS and LuneOS use and was the first release for LG Smart TVs
+* Enyo v2.7 is the most recent public release of the core frameworks from LG
 
 
 Everything below here is over 2 years old and perhaps no longer current:
 --------------------------------------------------------------------------
-
-
-[![NPM](https://nodei.co/npm/ares-ide.png)](https://nodei.co/npm/ares-ide/)
 
 Overview[](id:overview)
 --------
