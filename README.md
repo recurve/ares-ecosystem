@@ -20,7 +20,7 @@ If you don't have "nodejs" installed (server side Javascript engine) then go to 
 
 		https://nodejs.org/en/
 
-Next use the "node package manager" (NPM) to install the Ares Ecosystem IDE
+Next "cd" into your home directory and use the "node package manager" (NPM) to install the Ares Ecosystem IDE
 
 		npm -d install ares-ecosystem-ide
 
@@ -28,7 +28,7 @@ You can then launch Ares by issuing this command from the terminal:
 
 		~/node_modules/.bin/ares-ecosystem-ide -b
 
-* Note 1: the tilde is for a unix system to jump to your home directory, on a Windows PC you'd have to time the exact location).
+* Note 1: the tilde is for a unix system to jump to your home directory, on a Windows PC you'd have to type the exact location.
 * Note 2: you may want to launch with "sudo" (on unix systems) to have permissions to download a new bootplate (starter Enyo project) by using Ares menus. 
 * Note 3: alternatively you could download your preferred bootplate yourself directly. As of this moment the preferred version is here: http://enyojs.com/archive/bootplate-2.3.0-pre.12.zip
 * Note 4: Enyo 2.5 and 2.7 went in another direction to target the LG Smart TVs more directly and do not work with the Ares Ecosystem at this time. You can not open them in Deimos (Interface Builder). 
