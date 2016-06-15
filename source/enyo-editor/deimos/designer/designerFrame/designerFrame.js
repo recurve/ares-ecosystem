@@ -53,6 +53,7 @@ enyo.kind({
 		this.addDispatcherFeature();
 		window.onerror = enyo.bind(this, this.raiseLoadError);
 	},
+	
 	raiseLoadError: function(msg, url, linenumber) {
 		// I'm a goner
 		var file = url.replace(/.*\/services(?=\/)/,'');
@@ -87,7 +88,7 @@ enyo.kind({
 				errMsg = "Enyo used by your application is too old ("
 					+ myVerStr + "). Console log may show duplicated kind error "
 					+ "and Designer may not work as expected. You should use Enyo >= "
-					+ this.minEnyoVersion+" Read <a href='https://github.com/recurve/ares-ecosystem' target='_blank'>README.md to update Enyo libraries</a>";
+					+ this.minEnyoVersion+" Read <a href='https://github.com/enyojs/ares-project/blob/master/README.md' target='_blank'>README.md to update Enyo libraries</a>";
 				enyo.warn(errMsg);
 				/*
 				 * TODO this message should go in an error/warning history as described in ENYO-2462
@@ -167,7 +168,7 @@ enyo.kind({
 	},
 	//* Send message to Deimos via _this.$.communicator_
 	sendMessage: function(inMessage) {
-		this.trace(" msg ",inMessage);
+//		this.trace(" msg ",inMessage);
 		this.$.communicator.sendMessage(inMessage);
 	},
 	//* Receive message from Deimos
@@ -498,7 +499,7 @@ enyo.kind({
 				this.parentInstance.addClass("enyo-fit enyo-clip");
 			}
 			this.parentInstance.domStyles = {};
-			this.parentInstance.domStylesChanged();
+		//	this.parentInstance.domStylesChanged();
 			this.parentInstance.render();
 
 			// Notify Deimos that the kind rendered successfully
@@ -544,25 +545,47 @@ enyo.kind({
 	 * and send back a state message.
 	 */
 	initializeAllKindsAresOptions: function(inOptions) {
+		
 		// on msg "initializeOptions"
 		// genuine enyo.kind's master function extension
 		var self = this;
+		var splitRegExp = /[\.\-]+/ ;
+		var myVerStr = (enyo.version && enyo.version.enyo) || '0.0.0-pre.0';
+		var myVer = myVerStr.split(splitRegExp);
+
 		this.trace("starting user app initialization within designer iframe");
 		enyo.genuineEnyoKind = enyo.kind;
 		enyo.kind =  function(inProps) {
 			self.addKindAresOptions(inProps.components, inOptions);
-
 			enyo.genuineEnyoKind(inProps);
 		};
+
 		enyo.mixin(enyo.kind, enyo.genuineEnyoKind);
 
 		// warning: user code error will trigger this.raiseLoadError
 		// through window.onerror handler
 		// another warning: enyo.load is asynchronous. try/catch is useless
-		enyo.load("$enyo/../source/package.js", enyo.bind(this, function() {
-			this.trace("user app initialization done within designer iframe");
-			this.sendMessage({op: "state", val: "initialized"});
-		}));
+		
+		if(myVer[0] >= 2 ){
+			if(myVer[1] > 3 ){
+				try {
+					enyo.aresload("$enyo/../source/package.js", enyo.bind(this, function() {
+						this.trace("user app initialization done within designer iframe");
+						this.sendMessage({op: "state", val: "initialized"});
+					}));
+				}catch (e) {
+					var   errMsg = " enyo.aresload  Not Found in enyo/source/boot/boot.js   You should add it or update to a version that has it!";
+					this.trace(errMsg);
+   					this.sendMessage({op: "error", val: {msg: errMsg} }); 
+				}
+			}
+		}else{
+			enyo.load("$enyo/../source/package.js", enyo.bind(this, function() {
+				this.trace("user app initialization done within designer iframe");
+				this.sendMessage({op: "state", val: "initialized"});
+			}));
+		}	
+
 
 	},
 	addKindAresOptions: function(inComponents, inOptions) {
