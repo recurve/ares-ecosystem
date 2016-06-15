@@ -131,6 +131,20 @@
 					"description": "Enyo bootplate 2.1.1"
 				},
 				{
+					"id": "BootPlate 2.6",
+					"type": "template",
+					"files": [
+						{
+							"url": "https://github.com/micro-tech/bootplate-2.6.0/archive/master.zip",
+							"prefixToRemove": "bootplate-2.6.0-master",
+							"excluded": [
+								"bootplate-2.6.0/lib/onyx/samples"
+							]
+						}
+					],
+					"description": "Micro-tech BootPlate 2.6.0 "
+				},
+				{
 					"id": "WebOS-Ports",
 					"type": "template",
 					"files": [
