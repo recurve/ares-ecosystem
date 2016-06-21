@@ -1,6 +1,19 @@
 ChangeLog
 =========
 
+**Release: ares-ecosystem-ide 0.2.16**
+
+Brief:
+* Bug fix release - June 21, 2016
+
+Details:
+* New developer joined - named micro-tech - to smooth out and update some longstanding issues.
+* Updated to latest Cloud 9 ACE embedded IDE code editor. Solves some memory leaks.
+* Updated to latest Underscore and other libs
+* Issues with too many items visible in the Deimos designer appear to have been resolved.
+
+----------------------------------------------------------------------------------------------
+
 **Release: ares-ecosystem-ide 0.2.15**
 
 Brief:
