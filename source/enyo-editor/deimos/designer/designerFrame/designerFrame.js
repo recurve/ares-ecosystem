@@ -173,7 +173,6 @@ enyo.kind({
 	},
 	//* Receive message from Deimos
 	receiveMessage: function(inSender, inEvent) {
-
 		var msg = inEvent.message;
 		this.trace(" msg ",msg);
 
@@ -247,6 +246,7 @@ enyo.kind({
 			this.setDragType(msg.val);
 			break;
 		default:
+		console.log("OPPS");
 			enyo.warn("Deimos designerFrame received unknown message op:", msg);
 			break;
 		}
@@ -1779,12 +1779,15 @@ enyo.kind({
 		}
 	},
 	getDragAnchors: function(inResizeComponent, inHandle) {
-		var styleProps = {},
+			var styleProps = {},
 			anchors = {}
 		;
 
 		// Convert css string to hash
-		enyo.Control.cssTextToDomStyles(this.trimWhitespace(inResizeComponent.style), styleProps);
+	
+		if(this.inResizeComponent !== undefined ){																		// fix designer from trying to hash enpty strings 
+			enyo.Control.cssTextToDomStyles(this.trimWhitespace(inResizeComponent.style), styleProps);
+		}
 
 		// Setup anchors hash
 		anchors.top = (styleProps.top !== undefined && this.trimWhitespace(styleProps.top) !== "");
