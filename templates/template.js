@@ -5,6 +5,13 @@ enyo.kind({
 	kind: "Control",
 	published: {
 	},
+	bindings: {
+		//https://enyojs.com/docs/2.4.0/building-apps/managing-data/building-data-driven-apps.html
+	},
+	statics: {
+	},
+	handlers: {
+	},
 	events: {
 	},
 	components: [
