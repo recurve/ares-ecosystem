@@ -5,7 +5,7 @@ enyo.kind({
 	centered : false,
 	floating : true,
 	autoDismiss : false,
-	modal : false,
+	modal : true,
 	classes: "ares_phobos_autocomp ares-masked-content-popup",
 	published: {
 		aceWrapper: null,
@@ -36,7 +36,7 @@ enyo.kind({
 	AUTOCOMP_THIS_DOLLAR: 'this.$.',
 	AUTOCOMP_ENYO: "enyo.",
 	AUTOCOMP_ONYX: "onyx.",
-	debug: false,
+	debug: true,
 	input: "",
 	suggestions: null,				// List of suggestion to display in the popup
 	suggestionsEnyo: null,
@@ -86,6 +86,13 @@ enyo.kind({
 	 */
 	start: function(inEvent) {
 		var suggestions = new Phobos.Suggestions(), go = false;
+		
+		inEvent.data = [];												//  add for the new ace editor object reurning diff data
+		inEvent.data.text = inEvent.lines[0];							//
+		inEvent.data.action = inEvent.action;							//
+		inEvent.data.range = [];										//
+		inEvent.data.range.end = inEvent.end;							//  add for the new ace editor object reurning diff data
+	
 		if (this.analysis && this.analysis.objects && this.analysis.objects.length > 0) {
 
 			if (this.popupShown) {
@@ -102,7 +109,7 @@ enyo.kind({
 				if (inEvent) {
 					// Check if a '.' was inserted and see if we need to show-up the auto-complete popup
 					var data = inEvent.data;
-					if (data && data.action === 'insertText') {
+					if (data && data.action === 'insert') {																	// change to insert for new ace editor
 						var last = data.text.substr(data.text.length - 1);
 						if (last === ".") { // Check that last entered char is a '."
 							go = true;	// We need to check further
@@ -112,7 +119,6 @@ enyo.kind({
 					// Triggered by a Ctrl-Space coming from the user
 					go = true;		// We need to check further
 				}
-
 				// We can check further
 				if (go === true) {
 					if (this.isCompletionAvailable(inEvent, this.AUTOCOMP_THIS_DOLLAR)) {
@@ -415,7 +421,7 @@ enyo.kind({
 	processChanges: function(inEvent) {
 		this.trace("Auto-Completion update - ", inEvent.data, this.popupPosition);
 		var current, data = inEvent.data;
-		if (data.action === 'insertText') {
+		if (data.action === 'insert') {
 			current = data.range.end;
 		} else if (data.action === 'removeText') {
 			current = data.range.start;
