@@ -724,6 +724,10 @@ app.configure(function(){
 	});
 
 	app.use('/test', express.static(path.join(myDir, '/test')));
+	
+	// Aaron - July 2, 2016 - need this to load JS, CSS, and other template files from the directory.
+	// It works without this in DEV mode but for some reason releases need this to work. 
+	app.use('/ide/templates', express.static(path.join(myDir, '/templates')));
 
 	app.use(express.logger('dev'));
 
