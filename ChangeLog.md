@@ -1,6 +1,12 @@
 ChangeLog
 =========
 
+Brief:
+* Bug fix release - 
+
+Details:
+* fix bug for auto complete for the new Ace ide edtor that was add.
+
 **Release: ares-ecosystem-ide 0.2.16**
 
 Brief:
