@@ -165,7 +165,26 @@ enyo.kind({
 		this.trace("projectIndexerChanged: rebuilt the palette ");
 		
 		var catchAllPalette = this.buildCatchAllPalette();
-		var allPalette = ares.clone(catchAllPalette.concat(this.projectIndexer.design.palette || []));
+		
+		/*
+		 * Aaron - using a "hammer" here to cut down on duplication because 
+		 * I wasn't able to track down how the design.palette was getting duplicate records. 
+		*/
+		var paletteNameSet = new Set();
+		var buggyPaletteWithDuplicates = this.projectIndexer.design.palette || [];
+		var uniquePalette = new Array();
+		for (var i = 0; i < buggyPaletteWithDuplicates.length; i++) {
+			var possibleDuplicate = buggyPaletteWithDuplicates[i];
+			if ( ! paletteNameSet.has(possibleDuplicate.name)) {
+				paletteNameSet.add(possibleDuplicate.name);
+				uniquePalette.push(possibleDuplicate);
+			}
+		}
+		
+		if (this.projectIndexer.design.palette) {
+			this.projectIndexer.design.palette = uniquePalette;
+		}
+		var allPalette = ares.clone(catchAllPalette.concat(uniquePalette));
 		
 		var filterString = this.$.filterPalette.getValue().toLowerCase();
 		if (filterString !== "") {
