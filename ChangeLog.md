@@ -1,13 +1,26 @@
 ChangeLog
 =========
 
+**Release: ares-ecosystem-ide 0.2.17**
+
+----------------------------------------------------------------------------------------------
+
 Brief:
 * Bug fix release - 
 
 Details:
 * fix bug for auto complete for the new Ace ide edtor that was add.
+* fix bug where duplicate categories would be showin in the Deimos visual editor every time you saved a file.
+* Added WebOS device connectivity. 
+* upgraded to LESS 1.7.5
+* fix bug where file templates were not being used.
+* Added more to the Javascript file template for new JS files to help newbies.
+* upgraded Jake Gordon's state machine library 
+
 
 **Release: ares-ecosystem-ide 0.2.16**
+
+----------------------------------------------------------------------------------------------
 
 Brief:
 * Bug fix release - June 21, 2016

@@ -8,7 +8,7 @@ The only fully open source solution that brings you:
 
 [![NPM](https://nodei.co/npm/ares-ecosystem-ide.png)](https://nodei.co/npm/ares-ecosystem-ide/)
 
-Ares Ecosystem is at v2.16
+Ares Ecosystem is at v2.17
 ----------------------------
 
 This release plays nice with recent versions of Safari, Firefox, and Chrome
@@ -60,7 +60,7 @@ The promise is to allow developers to use an Interface Builder along with a rich
 Current status
 ----------------------
 
-* Ares Ecosystem v2.16 is only compatible with Enyo up to v2.3.9
+* Ares Ecosystem v2.17 is only compatible with Enyo up to v2.3.9
 * Enyo v2.5.7 is what WebOS and LuneOS use and was the first release for LG Smart TVs
 * Enyo v2.7 is the most recent public release of the core frameworks from LG
 

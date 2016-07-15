@@ -1,6 +1,6 @@
 {
-  "name": "ares-ide",
-  "version": "0.2.16",
+  "name": "ares-ecosystem-ide",
+  "version": "0.2.17",
   "dependencies": {
     "archiver": {
       "version": "0.4.10",
