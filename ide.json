@@ -173,6 +173,65 @@
 			],
 			"useJsonp":false,
 			"respawn": false
+		},
+			{
+			"active":false,
+			"id":"one Drive",
+			"icon":"$assets/harmonia/images/providers/sky.png",
+			"name":"OneDrive Sync Dir",
+			"type": ["filesystem"],
+			"provider": "hermes",
+			"command":"@NODE@", "params":[
+				"@INSTALLDIR@/hermes/fsLocal.js", "--level", "http", "--pathname", "/files", "--port", "0", "--root", "@HOME@\\OneDrive"
+			],
+			"useJsonp":false,
+			"verbose": false,
+			"respawn": false
+		},
+
+		{
+			"active":false,
+			"id":"Box",
+			"icon":"$assets/harmonia/images/providers/box_sync32x32.png",
+			"name":"Box Sync Dir",
+			"type": ["filesystem"],
+			"provider": "hermes",
+			"command":"@NODE@", "params":[
+				"@INSTALLDIR@/hermes/fsLocal.js", "--level", "http", "--pathname", "/files", "--port", "0", "--root", "@HOME@\\Documents\\My Box Files\\Default Sync Folder\\"
+			],
+			"useJsonp":false,
+			"verbose": false,
+			"respawn": false
+		},
+
+		{
+			"active":false,
+			"id":"Google Drive",
+			"icon":"$assets/harmonia/images/providers/drive_tile-32.png",
+			"name":"Google Sync Dir",
+			"type": ["filesystem"],
+			"provider": "hermes",
+			"command":"@NODE@", "params":[
+				"@INSTALLDIR@/hermes/fsLocal.js", "--level", "http", "--pathname", "/files", "--port", "0", "--root", "@HOME@\\Google Drive"
+			],
+			"useJsonp":false,
+			"verbose": false,
+			"respawn": false
+		},
+
+		{
+			"active":"false",
+			"id":"true image Dir",
+			"icon":"$assets/harmonia/images/providers/dir.png",
+			"name":"True image Dir",
+			"type": ["filesystem"],
+			"provider": "hermes",
+			"command":"@NODE@", "params":[
+				"@INSTALLDIR@/hermes/fsLocal.js", "--level", "http", "--pathname", "/files", "--port", "0", "--root", "@HOME@\\Sync"
+			],
+			"useJsonp":false,
+			"verbose": false,
+			"respawn": false
 		}
 	]
 }
