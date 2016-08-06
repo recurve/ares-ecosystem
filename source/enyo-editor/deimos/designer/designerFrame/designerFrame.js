@@ -125,6 +125,10 @@ enyo.kind({
 	adjustFrameworkFeatures: function() {
 		// Allow overriding kind definitions
 		enyo.kind.allowOverride = true;
+		// Disable enyo.ready
+		if(enyo.ready){
+			enyo.ready = enyo.nop;
+		}
 		// Disable autoStart/autoRender features of enyo.Application
 		if (enyo.Application) {
 			enyo.Application.prototype.start = enyo.nop;
