@@ -126,7 +126,7 @@ enyo.kind({
 		// Allow overriding kind definitions
 		enyo.kind.allowOverride = true;
 		// Disable enyo.ready
-			if(enyo.ready){
+		if(enyo.ready){
 			enyo.ready = enyo.nop;
 		}
 		// Disable autoStart/autoRender features of enyo.Application
